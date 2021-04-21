@@ -9,14 +9,14 @@ SELECT
 COUNT(*)
 FROM
 hr.job_history AS J
-	INNER JOIN
+INNER JOIN
 employees AS E
 WHERE
 E.EMPLOYEE_ID = J.EMPLOYEE_ID
-	AND E.EMAIL = email INTO quantidade_de_empregos;
+AND E.EMAIL = email INTO quantidade_de_empregos;
 RETURN quantidade_de_empregos;
 END $$
 
 DELIMITER ;
 
-SELECT buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR');
+SELECT BUSCAR_QUANTIDADE_DE_EMPREGOS_POR_FUNCIONARIO('NKOCHHAR');
